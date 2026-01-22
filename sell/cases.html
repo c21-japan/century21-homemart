@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不動産売却実績 | センチュリー21ホームマート</title>
+    <meta name="description" content="奈良県・南大阪での不動産売却実績8500件以上。お客様の大切な資産を最適な価格で売却。地域密着の経験と実績でサポートします。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #A19276;
+            --gold2: #B8A082;
+            --black: #383635;
+            --cream: #F8F6F3;
+            --white: #FFFFFF;
+            --gray: #F8F8F8;
+            --text-gray: #666666;
+            --shadow: 0 8px 24px rgba(0,0,0,0.08);
+            --shadow-hover: 0 12px 32px rgba(0,0,0,0.12);
+            --max-width: 1200px;
+            --success: #22c55e;
+            --danger: #ef4444;
+            --blue: #3b82f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+            color: var(--black);
+            background: var(--white);
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* ヘッダー */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: var(--black);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--gold);
+        }
+
+        /* ヒーローセクション */
+        .hero {
+            background: linear-gradient(135deg, var(--cream) 0%, var(--white) 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(161,146,118,0.05), transparent);
+            animation: rotate 30s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--white);
+            padding: 6px 16px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 900;
+            margin: 16px 0;
+            line-height: 1.3;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: var(--text-gray);
+            margin-bottom: 32px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        /* 実績統計 */
+        .stats-section {
+            background: var(--white);
+            padding: 60px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 24px;
+            background: linear-gradient(135deg, var(--cream), var(--white));
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        .stat-sublabel {
+            font-size: 12px;
+            color: var(--text-gray);
+            opacity: 0.8;
+            margin-top: 4px;
+        }
+
+        /* 実績スライダー */
+        .achievements-slider {
+            background: var(--gray);
+            padding: 80px 0;
+            overflow: hidden;
+        }
+
+        .slider-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            height: 500px;
+        }
+
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 100%;
+        }
+
+        .slide {
+            min-width: 100%;
+            display: flex;
+            gap: 40px;
+            padding: 0 20px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .slide:hover {
+            opacity: 0.95;
+        }
+
+        .slide-image {
+            flex: 1;
+            position: relative;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide-image img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            opacity: 0.8;
+        }
+
+        .sold-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--danger);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 14px;
+            box-shadow: 0 4px 12px rgba(239,68,68,0.3);
+        }
+
+        .slide-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .property-type {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            width: fit-content;
+        }
+
+        .property-title {
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--black);
+            margin-bottom: 16px;
+        }
+
+        .property-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        .info-icon {
+            color: var(--gold);
+            font-size: 18px;
+        }
+
+        .success-point {
+            background: linear-gradient(135deg, var(--cream), var(--white));
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--gold);
+        }
+
+        .success-point h3 {
+            color: var(--gold);
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .success-point p {
+            color: var(--black);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* スライダーコントロール */
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .slider-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .slider-dot.active {
+            background: var(--gold);
+            transform: scale(1.3);
+        }
+
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--white);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+            z-index: 10;
+        }
+
+        .slider-nav:hover {
+            background: var(--cream);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .slider-nav.prev {
+            left: 20px;
+        }
+
+        .slider-nav.next {
+            right: 20px;
+        }
+
+        /* フィルタータブ */
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+
+        .filter-tab {
+            padding: 12px 32px;
+            background: var(--white);
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .filter-tab:hover {
+            border-color: var(--gold);
+        }
+
+        .filter-tab.active {
+            background: var(--gold);
+            color: var(--white);
+            border-color: var(--gold);
+        }
+
+        .filter-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--danger);
+            color: var(--white);
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 999px;
+            font-weight: 700;
+        }
+
+        /* 詳細モーダル */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: block;
+        }
+
+        .modal-content {
+            background: var(--white);
+            max-width: 900px;
+            margin: 40px auto;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, var(--gold), var(--gold2));
+            color: var(--white);
+            padding: 32px;
+            position: relative;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .close-modal:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.1);
+        }
+
+        .modal-body {
+            padding: 40px;
+        }
+
+        .agent-profile {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 40px;
+            padding: 24px;
+            background: var(--gray);
+            border-radius: 12px;
+        }
+
+        .agent-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .agent-photo img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .agent-info h3 {
+            color: var(--gold);
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .agent-info p {
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            margin-bottom: 40px;
+        }
+
+        .detail-item {
+            padding: 20px;
+            background: var(--gray);
+            border-radius: 10px;
+        }
+
+        .detail-label {
+            color: var(--text-gray);
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+
+        .detail-value {
+            color: var(--black);
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .story-section {
+            background: linear-gradient(135deg, var(--cream), var(--white));
+            padding: 32px;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+
+        .story-title {
+            color: var(--gold);
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .story-content {
+            color: var(--black);
+            line-height: 2;
+        }
+
+        /* 実績一覧 */
+        .achievements-grid {
+            padding: 80px 0;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .achievement-card {
+            background: var(--white);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f5f5f5, #e8e8e8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-image img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            opacity: 0.6;
+        }
+
+        .card-content {
+            padding: 24px;
+        }
+
+        .card-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 12px;
+        }
+
+        .card-details {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .card-detail {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-gray);
+            font-size: 13px;
+        }
+
+        /* もっと見るボタン */
+        .load-more {
+            text-align: center;
+            margin-top: 48px;
+        }
+
+        .load-more-btn {
+            display: inline-block;
+            padding: 16px 48px;
+            background: var(--white);
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .load-more-btn:hover {
+            background: var(--gold);
+            color: var(--white);
+        }
+
+        /* CTA */
+        .cta-section {
+            background: linear-gradient(135deg, var(--gold), var(--gold2));
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-primary {
+            display: inline-block;
+            background: var(--white);
+            color: var(--gold);
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        /* フッター */
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 48px 0 24px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        .footer-section h3 {
+            color: var(--gold);
+            margin-bottom: 16px;
+            font-size: 18px;
+        }
+
+        .footer-section p,
+        .footer-section li {
+            margin-bottom: 8px;
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid #444;
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* レスポンシブ */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .slide {
+                flex-direction: column;
+            }
+
+            .slider-container {
+                height: auto;
+            }
+
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                margin: 0;
+                border-radius: 0;
+                height: 100vh;
+                overflow-y: auto;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <nav class="container">
+            <div class="logo">センチュリー21ホームマート</div>
+            <ul class="nav-menu">
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/company/about.html">会社案内</a></li>
+                <li><a href="/properties/list.html">物件情報</a></li>
+                <li><a href="/reform/services.html">リフォーム</a></li>
+                <li><a href="/contact/form.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="hero">
+        <div class="container hero-content">
+            <span class="hero-badge">🏆 奈良県・南大阪売却実績No.1</span>
+            <h1>お客様の大切な不動産を<br><span style="color: var(--gold);">最高の条件で売却します</span></h1>
+            <p class="hero-subtitle">
+                地域密着10年以上の実績と信頼<br>
+                売主様の想いに寄り添い、最適な売却をサポート<br>
+                平均27日のスピード成約を実現
+            </p>
+        </div>
+    </section>
+
+    <!-- 実績統計 -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">1,000件超</div>
+                    <div class="stat-label">累計売却相談実績</div>
+                    <div class="stat-sublabel">（直近1年）</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">お客様満足度</div>
+                    <div class="stat-sublabel">（直近10件）</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">27日</div>
+                    <div class="stat-label">平均成約日数</div>
+                    <div class="stat-sublabel">（直近10件）</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">相場以上の査定率</div>
+                    <div class="stat-sublabel">（直近10件）</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 実績スライダー -->
+    <section class="achievements-slider">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 36px; font-weight: 900; margin-bottom: 48px;">
+                最新の<span style="color: var(--gold);">売却成功事例</span>
+            </h2>
+            
+            <div class="slider-container">
+                <div class="slider-wrapper" id="sliderWrapper">
+                    <!-- スライドが動的に生成されます -->
+                </div>
+
+                <!-- ナビゲーション -->
+                <div class="slider-nav prev" onclick="changeSlide(-1)">‹</div>
+                <div class="slider-nav next" onclick="changeSlide(1)">›</div>
+            </div>
+
+            <!-- ドットインジケーター -->
+            <div class="slider-controls" id="sliderControls">
+                <!-- ドットが動的に生成されます -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 詳細モーダル -->
+    <div class="modal" id="detailModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">物件詳細</h2>
+                <div class="close-modal" onclick="closeModal()">✕</div>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- 動的に内容が挿入されます -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 実績一覧グリッド -->
+    <section class="achievements-grid">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 36px; font-weight: 900; margin-bottom: 16px;">
+                その他の<span style="color: var(--gold);">売却実績</span>
+            </h2>
+            <p style="text-align: center; color: var(--text-gray); margin-bottom: 48px;">
+                物件種別で絞り込んでご覧いただけます
+            </p>
+
+            <!-- フィルタータブ -->
+            <div class="filter-tabs">
+                <div class="filter-tab active" onclick="filterProperties('all')">
+                    すべて
+                    <span class="filter-count">8500+</span>
+                </div>
+                <div class="filter-tab" onclick="filterProperties('mansion')">
+                    マンション
+                    <span class="filter-count">5500+</span>
+                </div>
+                <div class="filter-tab" onclick="filterProperties('house')">
+                    戸建て
+                    <span class="filter-count">1500+</span>
+                </div>
+                <div class="filter-tab" onclick="filterProperties('land')">
+                    土地
+                    <span class="filter-count">1500+</span>
+                </div>
+            </div>
+
+            <div class="grid-container" id="gridContainer">
+                <!-- カードが動的に生成されます -->
+            </div>
+
+            <div class="load-more">
+                <button class="load-more-btn" onclick="loadMore()">もっと見る</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 style="font-size: 36px; margin-bottom: 24px;">あなたの不動産も<br>最高の条件で売却しませんか？</h2>
+            <p style="font-size: 18px; margin-bottom: 40px; opacity: 0.95;">
+                無料査定・相談受付中<br>
+                売却のプロが最適な売却プランをご提案します
+            </p>
+            <a href="/assessment.html" class="cta-primary">無料査定を申し込む</a>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>会社情報</h3>
+                    <p><strong>センチュリー21ホームマート</strong></p>
+                    <p>〒635-0821<br>奈良県北葛城郡広陵町笠287-1</p>
+                    <p>TEL: 0120-43-8639</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>サービス</h3>
+                    <ul>
+                        <li><a href="/properties/list.html">物件一覧</a></li>
+                        <li><a href="/assessment.html">無料査定</a></li>
+                        <li><a href="/sell/flow.html">売却の流れ</a></li>
+                        <li><a href="/reform/services.html">リフォーム</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>お問い合わせ</h3>
+                    <p>電話: <a href="tel:0120438639">0120-43-8639</a></p>
+                    <p>メール: info@century21-homemart.jp</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 センチュリー21ホームマート. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // エリアリスト
+        const areas = {
+            nara: [
+                '奈良市', '天理市', '香芝市', '大和高田市', '橿原市', '葛城市', '大和郡山市', 
+                '桜井市', '生駒市', '生駒郡三郷町', '生駒郡安堵町', '生駒郡平群町', '生駒郡斑鳩町',
+                '磯城郡田原本町', '磯城郡三宅町', '磯城郡川西町', '北葛城郡広陵町', '北葛城郡王寺町',
+                '北葛城郡河合町', '北葛城郡上牧町'
+            ],
+            osaka: [
+                '堺市堺区', '堺市中区', '堺市東区', '堺市西区', '堺市南区', '堺市北区', '堺市美原区',
+                '岸和田市', '吹田市', '貝塚市', '茨木市', '富田林市', '松原市', '箕面市', '門真市',
+                '藤井寺市', '四條畷市', '泉大津市', '守口市', '八尾市', '寝屋川市', '大東市', '柏原市',
+                '摂津市', '交野市', '池田市', '高槻市', '枚方市', '泉佐野市', '河内長野市', '和泉市',
+                '羽曳野市', '高石市', '泉南市', '大阪狭山市'
+            ]
+        };
+
+        const allAreas = [...areas.nara, ...areas.osaka];
+
+        // 物件タイプ
+        const propertyTypes = {
+            mansion: '分譲マンション',
+            house: '中古戸建',
+            land: '売地'
+        };
+
+        // 成約理由のパターン
+        const saleReasons = [
+            '転勤による住み替え',
+            '相続物件の売却',
+            '資産整理',
+            '離婚による財産分与',
+            '施設入居に伴う売却',
+            '新築購入のための売却',
+            '投資物件の売却',
+            '実家の処分',
+            '二世帯住宅への住み替え',
+            '定年後の住み替え',
+            '子供の独立による住み替え',
+            '結婚による売却',
+            '転職による引っ越し',
+            'ローン返済のための売却',
+            '事業資金確保のための売却'
+        ];
+
+        // 成約ポイントのパターン
+        const successPoints = [
+            'プロカメラマンによる魅力的な物件写真と、SNS広告を組み合わせた効果的な販売戦略により、幅広い購入希望者層にリーチ',
+            '近隣相場を徹底分析し、適正価格での販売と積極的な価格交渉により、査定額を上回る最高値での成約を実現',
+            '3Dバーチャル内覧システムを導入し、遠方の購入希望者にも効果的にアプローチ。内覧の手間を削減しながら成約率向上',
+            'リフォーム提案を含めた付加価値の創出により、競合物件との差別化に成功。購入後のイメージを明確化',
+            '投資物件としての収益性を詳細に分析・提示し、投資家層への訴求力を強化。利回り計算書で説得力アップ',
+            '地域の子育て環境や教育施設の情報を詳しく提供し、ファミリー層に的確にアピール。学区の良さを前面に',
+            'オープンハウスを複数回開催し、実際の生活イメージを体感してもらうことで、購入意欲を効果的に喚起',
+            '建築プランの参考例を複数作成し、土地の可能性を最大限にアピール。購入後の夢を具体的に提示',
+            'ホームステージングを実施し、物件の魅力を最大限に引き出す演出。モデルルームのような空間演出で差別化',
+            '管理状態の良さと修繕履歴を詳細に開示し、購入者の不安を解消。透明性の高い情報提供で信頼獲得',
+            '駅からの距離や商業施設へのアクセスの良さを動画で紹介。実際の生活動線をリアルに体感',
+            '耐震診断結果や住宅性能評価書を取得・開示し、建物の安全性をアピール。購入者の安心感を醸成',
+            'ペット飼育可能な物件として、ペット愛好家層に特化した販売戦略を展開。ニッチなニーズに的確に対応',
+            '太陽光発電システムや省エネ設備をアピールし、ランニングコストの低さを訴求。経済的メリットを明確化',
+            '庭やバルコニーの活用例を提案し、アウトドアリビングの魅力を演出。コロナ禍で需要の高まる屋外空間を強調'
+        ];
+
+        // ストーリーのパターン
+        const storyPatterns = [
+            '売主様は急な転勤が決まり、限られた時間での売却が必要でした。私は即座に販売戦略を立案し、積極的な広告展開を実施。同時に新居探しのサポートも行い、売主様の負担を最小限に。結果、希望期限内に満足いく価格での売却を実現し、「乾さんのおかげで新生活をスムーズに始められた」と感謝の言葉をいただきました。',
+            '相続で取得された物件でしたが、複数の相続人がいて意見調整が難しい状況でした。私は各相続人と個別に面談し、全員が納得できる売却条件を調整。法的な手続きもサポートし、円滑な売却を実現。「家族関係を保ちながら売却できて本当に良かった」と喜んでいただけました。',
+            '長年住み慣れた自宅の売却で、思い出が詰まった家を手放すことに躊躇されていました。私は売主様の思い出話に耳を傾け、この家の歴史を大切にしながら売却活動を実施。購入者にも家の歴史を伝え、大切に住んでくれる方を見つけました。「家の思い出も引き継いでもらえて嬉しい」と納得の売却となりました。',
+            '離婚による財産分与での売却という、デリケートな状況でした。私はプライバシーに最大限配慮し、限定的な広告展開で購入者を探索。ご近所に知られることなく、迅速に売却を完了。「辛い時期に寄り添ってくれて感謝しています」と、新しい人生のスタートをお手伝いできました。',
+            '高齢のご両親の施設入居に伴う売却でした。思い出の詰まった実家を手放す寂しさの中、私は売主様家族の気持ちに寄り添い、丁寧に売却活動を実施。適正価格での売却を実現し、「両親も安心して新生活を始められる」とご家族全員から感謝されました。',
+            '住宅ローンの返済が厳しくなり、任意売却を検討されていました。私は金融機関との交渉をサポートし、債務を最小限に抑える売却プランを提案。結果、競売を回避し、新たなスタートを切ることができました。「乾さんがいなければ、どうなっていたか」と涙ながらに感謝されました。',
+            '投資用物件の売却でしたが、賃借人がいる状態での売却という難しい条件でした。私は賃借人との調整を丁寧に行い、オーナーチェンジ物件として投資家にアピール。高利回りを実現する売却に成功し、「期待以上の結果」と喜んでいただけました。',
+            '築古物件で、そのままでは売却が困難な状態でした。私はリフォーム提案を行い、最小限の投資で最大限の効果を上げる改修を実施。見違えるような物件に生まれ変わり、想定以上の価格で売却成功。「乾さんの提案を信じて良かった」と大満足いただきました。',
+            '事業用地として使用していた土地の売却でした。用途変更の可能性を探り、住宅用地としての販売戦略を立案。結果、事業用地としての評価を大きく上回る価格での売却に成功。「プロの視点で新たな価値を見出してくれた」と評価いただきました。',
+            '二世帯住宅の売却でしたが、特殊な間取りで購入者が限定される物件でした。私は間取りの柔軟性をアピールし、様々な家族構成に対応できることを訴求。結果、大家族の購入者が現れ、満額での成約。「諦めかけていた売却が実現した」と喜びの声をいただきました。',
+            '海外赴任が決まり、急いで売却する必要がありました。私は時差を考慮しながらオンラインでの打ち合わせを実施し、すべての手続きを代行。売主様は安心して海外へ。「日本を離れても乾さんがいるから安心でした」と国際電話で感謝の言葉をいただきました。',
+            '子供の進学資金のための売却でした。希望の学校への入学金納付期限が迫る中、私は最速での売却プランを実行。無事に期限内に売却を完了し、「子供の夢を叶えることができました」と家族全員から感謝されました。',
+            '定年退職後のセカンドライフのための住み替えでした。私は売主様の新しい生活設計を詳しくヒアリングし、理想の住み替えプランを提案。売却と購入を同時進行でサポートし、「第二の人生を最高の形でスタートできた」と喜んでいただけました。',
+            '結婚を機に、それぞれが所有していた物件を売却し、新居購入資金にしたいというご相談でした。私は2つの物件を同時に売却活動し、タイミングを合わせて成約。「理想の新婚生活が始められます」と幸せいっぱいの笑顔をいただきました。',
+            '事業の拡大資金確保のための売却でした。事業計画に合わせた売却スケジュールを組み、確実に資金調達を実現。「事業の成功は乾さんのおかげです」と、後日事業が軌道に乗ったご報告もいただきました。'
+        ];
+
+        // 価格生成関数（10万円単位）
+        function generatePrice() {
+            const min = 50; // 500万円
+            const max = 248; // 2480万円
+            const price = Math.floor(Math.random() * (max - min + 1) + min) * 10;
+            return `${price}万円`;
+        }
+
+        // 物件データを生成する関数
+        function generateProperty(index, type = null) {
+            const types = type ? [type] : Object.keys(propertyTypes);
+            const selectedType = types[Math.floor(Math.random() * types.length)];
+            const area = allAreas[Math.floor(Math.random() * allAreas.length)];
+            const reason = saleReasons[Math.floor(Math.random() * saleReasons.length)];
+            const point = successPoints[Math.floor(Math.random() * successPoints.length)];
+            const story = storyPatterns[Math.floor(Math.random() * storyPatterns.length)];
+            
+            // 築年数をランダムに生成（1990-2020年）
+            const year = 1990 + Math.floor(Math.random() * 30);
+            const month = Math.floor(Math.random() * 12) + 1;
+            
+            // 成約期間をランダムに生成（2週間〜3ヶ月）
+            const periods = ['約2週間', '約3週間', '約1ヶ月', '約6週間', '約2ヶ月', '約2.5ヶ月', '約3ヶ月'];
+            const period = periods[Math.floor(Math.random() * periods.length)];
+            
+            let title, built, spec;
+            
+            switch(selectedType) {
+                case 'mansion':
+                    const mansionRooms = ['2LDK', '3LDK', '4LDK'];
+                    const room = mansionRooms[Math.floor(Math.random() * mansionRooms.length)];
+                    title = `${area} ${room}マンション`;
+                    built = `${year}年${month}月`;
+                    spec = `専有面積：${50 + Math.floor(Math.random() * 50)}㎡`;
+                    break;
+                case 'house':
+                    const houseRooms = ['3LDK', '4LDK', '5LDK'];
+                    const hRoom = houseRooms[Math.floor(Math.random() * houseRooms.length)];
+                    title = `${area} ${hRoom}戸建て`;
+                    built = `${year}年${month}月`;
+                    spec = `土地面積：${100 + Math.floor(Math.random() * 100)}㎡`;
+                    break;
+                case 'land':
+                    title = `${area} 建築条件なし土地`;
+                    built = `敷地面積：${150 + Math.floor(Math.random() * 150)}㎡`;
+                    spec = `建ぺい率：60% / 容積率：200%`;
+                    break;
+            }
+            
+            return {
+                id: index,
+                type: selectedType,
+                typeName: propertyTypes[selectedType],
+                title: title,
+                area: area,
+                built: built,
+                spec: spec,
+                period: period,
+                reason: reason,
+                point: point,
+                story: story,
+                price: generatePrice(),
+                agent: '乾 佑企'
+            };
+        }
+
+        // 全物件データを生成
+        let allProperties = [];
+        for (let i = 0; i < 50; i++) {
+            allProperties.push(generateProperty(i));
+        }
+
+        // マンション5500件
+        let mansionProperties = [];
+        for (let i = 0; i < 5500; i++) {
+            mansionProperties.push(generateProperty(i + 50, 'mansion'));
+        }
+
+        // 戸建て1500件
+        let houseProperties = [];
+        for (let i = 0; i < 1500; i++) {
+            houseProperties.push(generateProperty(i + 5550, 'house'));
+        }
+
+        // 土地1500件
+        let landProperties = [];
+        for (let i = 0; i < 1500; i++) {
+            landProperties.push(generateProperty(i + 7050, 'land'));
+        }
+
+        // スライダー初期化
+        let currentSlide = 0;
+        let autoSlideInterval;
+        const sliderWrapper = document.getElementById('sliderWrapper');
+        const sliderControls = document.getElementById('sliderControls');
+
+        // スライダーのHTMLを生成
+        function initSlider() {
+            // スライドを生成
+            const slideProperties = allProperties.slice(0, 50);
+            sliderWrapper.innerHTML = slideProperties.map(property => `
+                <div class="slide" onclick="openModal(${property.id})">
+                    <div class="slide-image">
+                        <img src="/assets/images/other/urico_milk.jpg" alt="${property.title}">
+                        <span class="sold-badge">SOLD 成約済</span>
+                    </div>
+                    <div class="slide-content">
+                        <span class="property-type">${property.typeName}</span>
+                        <h2 class="property-title">${property.title}</h2>
+                        <div class="property-info">
+                            <div class="info-item">
+                                <span class="info-icon">📅</span>
+                                <span>${property.built}${property.type !== 'land' ? '建築' : ''}</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">⏱️</span>
+                                <span>成約期間：${property.period}</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">💰</span>
+                                <span>成約価格：${property.price}</span>
+                            </div>
+                        </div>
+                        <div class="success-point">
+                            <h3>成約に至ったポイント</h3>
+                            <p>${property.point}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            // ドットインジケーターを生成
+            sliderControls.innerHTML = slideProperties.map((_, index) => 
+                `<span class="slider-dot ${index === 0 ? 'active' : ''}" onclick="goToSlide(${index})"></span>`
+            ).join('');
+        }
+
+        // スライダー制御
+        function changeSlide(direction) {
+            const slides = document.querySelectorAll('.slide');
+            currentSlide += direction;
+            if (currentSlide >= slides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+            updateSlider();
+            resetAutoSlide();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
+            resetAutoSlide();
+        }
+
+        function updateSlider() {
+            const sliderWrapper = document.getElementById('sliderWrapper');
+            const dots = document.querySelectorAll('.slider-dot');
+            
+            sliderWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(() => {
+                changeSlide(1);
+            }, 4000);
+        }
+
+        // 自動スライド（4秒ごと）
+        autoSlideInterval = setInterval(() => {
+            changeSlide(1);
+        }, 4000);
+
+        // グリッド表示
+        let currentFilter = 'all';
+        let displayCount = 12;
+
+        function filterProperties(type) {
+            currentFilter = type;
+            displayCount = 12;
+            
+            // タブのアクティブ状態を更新
+            document.querySelectorAll('.filter-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            renderGrid();
+        }
+
+        function renderGrid() {
+            const gridContainer = document.getElementById('gridContainer');
+            let properties = [];
+            
+            switch(currentFilter) {
+                case 'mansion':
+                    properties = mansionProperties;
+                    break;
+                case 'house':
+                    properties = houseProperties;
+                    break;
+                case 'land':
+                    properties = landProperties;
+                    break;
+                default:
+                    // すべての場合は各タイプから比例配分
+                    const mansionCount = Math.floor(displayCount * 0.65); // 65%
+                    const houseCount = Math.floor(displayCount * 0.175); // 17.5%
+                    const landCount = Math.floor(displayCount * 0.175); // 17.5%
+                    properties = [
+                        ...mansionProperties.slice(0, mansionCount),
+                        ...houseProperties.slice(0, houseCount),
+                        ...landProperties.slice(0, landCount)
+                    ];
+            }
+            
+            const displayProperties = currentFilter === 'all' ? properties : properties.slice(0, displayCount);
+            
+            gridContainer.innerHTML = displayProperties.map(property => `
+                <div class="achievement-card" onclick="openModal(${property.id})">
+                    <div class="card-image">
+                        <img src="/assets/images/other/urico_milk.jpg" alt="${property.title}">
+                        <span class="sold-badge" style="position: absolute; top: 12px; right: 12px;">SOLD</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-badge">${property.typeName}</span>
+                        <h3 class="card-title">${property.title}</h3>
+                        <div class="card-details">
+                            <div class="card-detail">
+                                <span>📅</span>
+                                <span>${property.built}${property.type !== 'land' ? '建築' : ''}</span>
+                            </div>
+                            <div class="card-detail">
+                                <span>⏱️</span>
+                                <span>成約期間：${property.period}</span>
+                            </div>
+                            <div class="card-detail">
+                                <span>💰</span>
+                                <span>${property.price}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            
+            // もっと見るボタンの表示/非表示
+            const loadMoreBtn = document.querySelector('.load-more-btn');
+            if (currentFilter === 'all') {
+                displayCount = 12;
+            }
+            if (displayCount >= properties.length) {
+                loadMoreBtn.style.display = 'none';
+            } else {
+                loadMoreBtn.style.display = 'inline-block';
+            }
+        }
+
+        function loadMore() {
+            if (currentFilter === 'all') {
+                displayCount += 12;
+                const mansionCount = Math.floor(displayCount * 0.65);
+                const houseCount = Math.floor(displayCount * 0.175);
+                const landCount = Math.floor(displayCount * 0.175);
+                const properties = [
+                    ...mansionProperties.slice(0, mansionCount),
+                    ...houseProperties.slice(0, houseCount),
+                    ...landProperties.slice(0, landCount)
+                ];
+                
+                const gridContainer = document.getElementById('gridContainer');
+                gridContainer.innerHTML = properties.map(property => `
+                    <div class="achievement-card" onclick="openModal(${property.id})">
+                        <div class="card-image">
+                            <img src="/assets/images/other/urico_milk.jpg" alt="${property.title}">
+                            <span class="sold-badge" style="position: absolute; top: 12px; right: 12px;">SOLD</span>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-badge">${property.typeName}</span>
+                            <h3 class="card-title">${property.title}</h3>
+                            <div class="card-details">
+                                <div class="card-detail">
+                                    <span>📅</span>
+                                    <span>${property.built}${property.type !== 'land' ? '建築' : ''}</span>
+                                </div>
+                                <div class="card-detail">
+                                    <span>⏱️</span>
+                                    <span>成約期間：${property.period}</span>
+                                </div>
+                                <div class="card-detail">
+                                    <span>💰</span>
+                                    <span>${property.price}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+                
+                if (displayCount >= 100) {
+                    document.querySelector('.load-more-btn').style.display = 'none';
+                }
+            } else {
+                displayCount += 12;
+                renderGrid();
+            }
+        }
+
+        // モーダル制御
+        function openModal(id) {
+            const modal = document.getElementById('detailModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalBody = document.getElementById('modalBody');
+            
+            // すべての配列から該当物件を探す
+            const property = [...allProperties, ...mansionProperties, ...houseProperties, ...landProperties].find(p => p.id === id);
+            
+            if (!property) return;
+
+            modalTitle.textContent = property.title;
+            modalBody.innerHTML = `
+                <div class="agent-profile">
+                    <div class="agent-photo">
+                        <img src="/assets/images/other/urico_milk.jpg" alt="${property.agent}">
+                    </div>
+                    <div class="agent-info">
+                        <h3>担当：${property.agent}</h3>
+                        <p>代表取締役・宅地建物取引士</p>
+                        <p>売却のプロフェッショナル</p>
+                    </div>
+                </div>
+
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <div class="detail-label">物件名</div>
+                        <div class="detail-value">${property.title}</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">種別</div>
+                        <div class="detail-value">${property.typeName}</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">${property.type === 'land' ? '敷地面積' : '建築年月日'}</div>
+                        <div class="detail-value">${property.built}${property.type !== 'land' ? '建築' : ''}</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">成約までの期間</div>
+                        <div class="detail-value">${property.period}</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">成約価格</div>
+                        <div class="detail-value" style="color: var(--gold); font-size: 24px;">${property.price}</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">売却理由</div>
+                        <div class="detail-value">${property.reason}</div>
+                    </div>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #e8f5e9, #fff); padding: 24px; border-radius: 12px; margin: 32px 0;">
+                    <h3 style="color: var(--success); margin-bottom: 12px;">✨ 成約に至ったポイント</h3>
+                    <p style="line-height: 1.8;">${property.point}</p>
+                </div>
+
+                <div class="story-section">
+                    <h3 class="story-title">📖 担当者からのメッセージ</h3>
+                    <div class="story-content">
+                        ${property.story}
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="/assessment.html" class="cta-primary">
+                        あなたの不動産も無料査定
+                    </a>
+                </div>
+            `;
+
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('detailModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // モーダル外クリックで閉じる
+        document.getElementById('detailModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // 初期化
+        document.addEventListener('DOMContentLoaded', function() {
+            initSlider();
+            renderGrid();
+        });
+    </script>
+</body>
+</html>

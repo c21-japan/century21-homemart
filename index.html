@@ -1,0 +1,2064 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>センチュリー21ホームマート｜奈良・大阪の不動産売買・リフォーム</title>
+  <meta name="description" content="センチュリー21ホームマート。奈良・大阪エリアの不動産売買仲介、買取再販、リフォームまでワンストップサービス。店舗数日本一のネットワークで安心の不動産取引を。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;900&family=Roboto:wght@700;900&display=swap" rel="stylesheet"/>
+  
+  <style>
+    /* ==== センチュリー21ブランドカラー ==== */
+    :root {
+      --c21-gold: #B8A265;
+      --c21-gold-dark: #9B8A57;
+      --c21-gold-light: #D4C299;
+      --c21-black: #1A1A1A;
+      --c21-gray: #4A4A4A;
+      --c21-gray-light: #F5F5F5;
+      --c21-white: #FFFFFF;
+      --c21-red: #DC143C;
+      --c21-green: #22C55E;
+      --c21-blue: #0066CC;
+      --c21-success: #10B981;
+      --c21-pink: #FFB6C1;
+      
+      --max-width: 1280px;
+      --header-height: 80px;
+      --mobile-header: 60px;
+      --shadow-sm: 0 2px 4px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.12);
+      --shadow-lg: 0 8px 24px rgba(0,0,0,0.16);
+      --shadow-xl: 0 16px 48px rgba(0,0,0,0.20);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--c21-gray);
+      background: var(--c21-white);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* ==== ヘッダー ==== */
+    .header {
+      background: var(--c21-white);
+      box-shadow: var(--shadow-sm);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      transition: var(--transition);
+    }
+    
+    .header-top {
+      background: var(--c21-black);
+      color: var(--c21-white);
+      font-size: 13px;
+      padding: 8px 0;
+    }
+    
+    .header-top-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .header-info {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+    
+    .header-info span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    
+    .header-main {
+      background: var(--c21-white);
+      height: var(--header-height);
+      display: flex;
+      align-items: center;
+    }
+    
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    
+    /* ロゴ */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+    }
+    
+    .logo-mark {
+      background: var(--c21-gold);
+      color: var(--c21-white);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 20px;
+      font-family: 'Roboto', sans-serif;
+    }
+    
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .logo-century {
+      font-size: 11px;
+      color: var(--c21-gold);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    
+    .logo-name {
+      font-size: 18px;
+      color: var(--c21-black);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    
+    /* ナビゲーション */
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+    
+    .nav-menu {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    
+    .nav-item {
+      position: relative;
+    }
+    
+    .nav-link {
+      color: var(--c21-gray);
+      font-weight: 500;
+      font-size: 15px;
+      padding: 8px 0;
+      position: relative;
+      transition: var(--transition);
+    }
+    
+    .nav-link:hover {
+      color: var(--c21-gold);
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--c21-gold);
+      transition: width 0.3s;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    /* ドロップダウン */
+    .nav-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--c21-white);
+      box-shadow: var(--shadow-lg);
+      border-radius: 8px;
+      min-width: 240px;
+      padding: 8px 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: var(--transition);
+      margin-top: 8px;
+    }
+    
+    .nav-item:hover .nav-dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .dropdown-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      color: var(--c21-gray);
+      font-size: 14px;
+      transition: var(--transition);
+    }
+    
+    .dropdown-link:hover {
+      background: var(--c21-gray-light);
+      color: var(--c21-gold);
+      padding-left: 24px;
+    }
+    
+    .dropdown-badge {
+      background: var(--c21-success);
+      color: var(--c21-white);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 600;
+    }
+    
+    /* ヘッダーCTA */
+    .header-cta {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+    
+    .btn-tel {
+      background: var(--c21-gold);
+      color: var(--c21-white);
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .btn-tel:hover {
+      background: var(--c21-gold-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .btn-contact {
+      background: var(--c21-white);
+      color: var(--c21-gold);
+      border: 2px solid var(--c21-gold);
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: var(--transition);
+    }
+    
+    .btn-contact:hover {
+      background: var(--c21-gold);
+      color: var(--c21-white);
+    }
+    
+    /* モバイルメニュー */
+    .mobile-menu-btn {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      padding: 8px;
+      cursor: pointer;
+    }
+    
+    .mobile-menu-btn span {
+      width: 24px;
+      height: 2px;
+      background: var(--c21-black);
+      transition: var(--transition);
+    }
+    
+    /* ==== ヒーローセクション ==== */
+    main {
+      margin-top: calc(var(--header-height) + 36px);
+    }
+    
+    .hero {
+      background: linear-gradient(135deg, #FDFBF7 0%, #FFF 100%);
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 60%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(184,162,101,0.05) 0%, transparent 70%);
+      animation: float 20s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(10deg); }
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 48px;
+      align-items: center;
+    }
+    
+    @media (min-width: 768px) {
+      .hero-content {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+    
+    .hero-text {
+      max-width: 600px;
+    }
+    
+    .hero-badge {
+      display: inline-block;
+      background: var(--c21-gold);
+      color: var(--c21-white);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 900;
+      color: var(--c21-black);
+      line-height: 1.2;
+      margin-bottom: 24px;
+    }
+    
+    .hero h1 .gold {
+      background: linear-gradient(135deg, var(--c21-gold) 0%, var(--c21-gold-dark) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero-lead {
+      font-size: 18px;
+      color: var(--c21-gray);
+      margin-bottom: 32px;
+      line-height: 1.8;
+    }
+    
+    .hero-cta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, var(--c21-gold) 0%, var(--c21-gold-dark) 100%);
+      color: var(--c21-white);
+      padding: 16px 32px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .btn-secondary {
+      background: var(--c21-white);
+      color: var(--c21-gold);
+      border: 2px solid var(--c21-gold);
+      padding: 14px 30px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+    }
+    
+    .btn-secondary:hover {
+      background: var(--c21-gold);
+      color: var(--c21-white);
+      transform: translateY(-2px);
+    }
+    
+    /* ヒーローカード（インタラクティブ化） */
+    .hero-card {
+      background: var(--c21-white);
+      border-radius: 16px;
+      padding: 0;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-card-tabs {
+      display: flex;
+      background: var(--c21-gray-light);
+      border-radius: 16px 16px 0 0;
+    }
+    
+    .hero-card-tab {
+      flex: 1;
+      padding: 12px;
+      background: transparent;
+      border: none;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: var(--transition);
+      color: var(--c21-gray);
+    }
+    
+    .hero-card-tab.active {
+      background: var(--c21-white);
+      color: var(--c21-gold);
+    }
+    
+    .hero-card-content {
+      padding: 24px;
+      min-height: 400px;
+    }
+    
+    .tab-panel {
+      display: none;
+    }
+    
+    .tab-panel.active {
+      display: block;
+      animation: fadeIn 0.3s;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* ==== URICOマッチング診断 ==== */
+    .matching-widget {
+      text-align: center;
+    }
+    
+    .matching-icon {
+      font-size: 64px;
+      margin-bottom: 16px;
+      animation: bounce 2s infinite;
+    }
+    
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .matching-search {
+      margin-bottom: 24px;
+    }
+    
+    .matching-search-box {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    
+    .matching-input {
+      flex: 1;
+      padding: 12px 16px;
+      border: 2px solid #E5E5E5;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: var(--transition);
+    }
+    
+    .matching-input:focus {
+      outline: none;
+      border-color: var(--c21-gold);
+      box-shadow: 0 0 0 3px rgba(184,162,101,0.1);
+    }
+    
+    .matching-search-btn {
+      padding: 12px 24px;
+      background: var(--c21-gold);
+      color: var(--c21-white);
+      border: none;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    
+    .matching-search-btn:hover {
+      background: var(--c21-gold-dark);
+      transform: translateY(-2px);
+    }
+    
+    .matching-result {
+      display: none;
+      animation: slideUp 0.5s;
+    }
+    
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .matching-count {
+      font-size: 48px;
+      font-weight: 900;
+      color: var(--c21-pink);
+      margin-bottom: 8px;
+    }
+    
+    .matching-label {
+      font-size: 16px;
+      color: var(--c21-gray);
+      margin-bottom: 20px;
+    }
+    
+    .matching-progress {
+      background: #E5E5E5;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    
+    .matching-progress-bar {
+      background: linear-gradient(90deg, var(--c21-pink), var(--c21-gold));
+      height: 100%;
+      width: 0%;
+      transition: width 1s ease;
+      animation: progressPulse 2s infinite;
+    }
+    
+    @keyframes progressPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
+    }
+    
+    /* ==== リフォーム見積もりツール ==== */
+    .reform-tool {
+      background: linear-gradient(135deg, #F0FFF0, #FFF);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    
+    .reform-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--c21-black);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .reform-section {
+      margin-bottom: 24px;
+      padding: 16px;
+      background: var(--c21-white);
+      border-radius: 8px;
+      border: 2px solid #E5E5E5;
+      transition: var(--transition);
+    }
+    
+    .reform-section.active {
+      border-color: var(--c21-gold);
+      box-shadow: 0 0 0 3px rgba(184,162,101,0.1);
+    }
+    
+    .reform-section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      cursor: pointer;
+    }
+    
+    .reform-section-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+    }
+    
+    .reform-section-price {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--c21-gold);
+    }
+    
+    .reform-options {
+      display: none;
+      padding-top: 12px;
+      border-top: 1px solid #E5E5E5;
+      margin-top: 12px;
+    }
+    
+    .reform-section.active .reform-options {
+      display: block;
+    }
+    
+    .reform-option {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 0;
+    }
+    
+    .reform-option-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 1;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    
+    .reform-option-price {
+      font-weight: 600;
+      font-size: 14px;
+      margin-left: auto;
+      margin-right: 12px;
+    }
+    
+    .reform-option-price.plus {
+      color: var(--c21-red);
+    }
+    
+    .reform-option-price.minus {
+      color: var(--c21-green);
+    }
+    
+    .reform-checkbox {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+    
+    .reform-select {
+      padding: 6px 12px;
+      border: 2px solid #E5E5E5;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    
+    .reform-select:focus {
+      outline: none;
+      border-color: var(--c21-gold);
+    }
+    
+    .reform-total {
+      background: var(--c21-gold);
+      color: var(--c21-white);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 24px;
+    }
+    
+    .reform-total-label {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    
+    .reform-total-price {
+      font-size: 36px;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+    
+    .reform-total-original {
+      text-decoration: line-through;
+      opacity: 0.8;
+      font-size: 14px;
+      margin-right: 8px;
+    }
+    
+    .reform-total-discount {
+      color: #FFE4B5;
+      font-weight: 700;
+    }
+    
+    .reform-badge {
+      display: inline-block;
+      background: var(--c21-red);
+      color: var(--c21-white);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-left: 8px;
+    }
+    
+    /* ==== ゲーミフィケーション要素 ==== */
+    .game-section {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #F0F8FF, #FFF);
+    }
+    
+    .game-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .game-title {
+      text-align: center;
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 900;
+      margin-bottom: 16px;
+      color: var(--c21-black);
+    }
+    
+    .game-subtitle {
+      text-align: center;
+      font-size: 16px;
+      color: var(--c21-gray);
+      margin-bottom: 48px;
+    }
+    
+    .game-cards {
+      display: grid;
+      gap: 32px;
+    }
+    
+    @media (min-width: 768px) {
+      .game-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    .game-card {
+      background: var(--c21-white);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: var(--shadow-lg);
+      transition: var(--transition);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .game-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .game-card::before {
+      content: '🎮 体験する';
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: var(--c21-gold);
+      color: var(--c21-white);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    
+    /* ==== 売却方法比較ツール ==== */
+    .comparison-tool {
+      background: var(--c21-white);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .comparison-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    
+    .comparison-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--c21-black);
+      margin-bottom: 8px;
+    }
+    
+    .comparison-options {
+      display: grid;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    
+    @media (min-width: 768px) {
+      .comparison-options {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .comparison-option {
+      background: var(--c21-gray-light);
+      border: 2px solid transparent;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    
+    .comparison-option:hover {
+      border-color: var(--c21-gold);
+    }
+    
+    .comparison-option.selected {
+      background: linear-gradient(135deg, var(--c21-gold-light), var(--c21-gold));
+      color: var(--c21-white);
+      border-color: var(--c21-gold);
+    }
+    
+    .comparison-icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+    
+    .comparison-name {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    
+    .comparison-desc {
+      font-size: 12px;
+    }
+    
+    .comparison-result {
+      background: linear-gradient(135deg, #F0FFF0, #FFF);
+      border: 2px solid var(--c21-green);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+    
+    .comparison-result-value {
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--c21-green);
+      margin-bottom: 8px;
+    }
+    
+    .comparison-result-label {
+      font-size: 14px;
+      color: var(--c21-gray);
+    }
+    
+    /* ==== 特徴セクション ==== */
+    .features {
+      padding: 80px 0;
+      background: var(--c21-white);
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    
+    .section-title {
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 900;
+      color: var(--c21-black);
+      margin-bottom: 16px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: var(--c21-gold);
+    }
+    
+    .section-subtitle {
+      font-size: 16px;
+      color: var(--c21-gray);
+      margin-top: 20px;
+    }
+    
+    .features-grid {
+      display: grid;
+      gap: 32px;
+    }
+    
+    @media (min-width: 768px) {
+      .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .feature-card {
+      background: var(--c21-white);
+      border: 1px solid #E5E5E5;
+      border-radius: 12px;
+      padding: 32px;
+      text-align: center;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--c21-gold) 0%, var(--c21-gold-light) 100%);
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--c21-gold);
+    }
+    
+    .feature-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .feature-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 24px;
+      background: linear-gradient(135deg, var(--c21-gold-light) 0%, var(--c21-gold) 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+    }
+    
+    .feature-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--c21-black);
+      margin-bottom: 12px;
+    }
+    
+    .feature-desc {
+      font-size: 14px;
+      color: var(--c21-gray);
+      line-height: 1.8;
+    }
+    
+    /* ==== サービスグリッド ==== */
+    .services {
+      padding: 80px 0;
+      background: var(--c21-gray-light);
+    }
+    
+    .services-grid {
+      display: grid;
+      gap: 24px;
+    }
+    
+    @media (min-width: 768px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    .service-card {
+      background: var(--c21-white);
+      border-radius: 12px;
+      padding: 24px;
+      transition: var(--transition);
+      cursor: pointer;
+      border: 2px solid transparent;
+      position: relative;
+    }
+    
+    .service-card:hover {
+      border-color: var(--c21-gold);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .service-card.complete::after {
+      content: '✓';
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 24px;
+      height: 24px;
+      background: var(--c21-success);
+      color: var(--c21-white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    
+    .service-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--c21-gold);
+      color: var(--c21-white);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+    
+    .service-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--c21-black);
+    }
+    
+    .service-desc {
+      font-size: 13px;
+      color: var(--c21-gray);
+      line-height: 1.6;
+    }
+    
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--c21-gold);
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 12px;
+    }
+    
+    .service-link:hover {
+      gap: 8px;
+    }
+    
+    /* ==== フッター ==== */
+    .footer {
+      background: var(--c21-black);
+      color: var(--c21-white);
+      padding: 60px 0 20px;
+    }
+    
+    .footer-content {
+      display: grid;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    
+    @media (min-width: 768px) {
+      .footer-content {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 32px;
+      }
+    }
+    
+    .footer-brand {
+      max-width: 320px;
+    }
+    
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    
+    .footer-logo .logo-mark {
+      background: var(--c21-white);
+      color: var(--c21-gold);
+    }
+    
+    .footer-logo .logo-text {
+      color: var(--c21-white);
+    }
+    
+    .footer-desc {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #999;
+      margin-bottom: 20px;
+    }
+    
+    .footer-contact {
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    
+    .footer-section h4 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--c21-gold);
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+    
+    .footer-links a {
+      color: #999;
+      font-size: 14px;
+      transition: var(--transition);
+    }
+    
+    .footer-links a:hover {
+      color: var(--c21-gold);
+      padding-left: 8px;
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid #333;
+      padding-top: 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    /* ==== レスポンシブ ==== */
+    @media (max-width: 768px) {
+      .header-top {
+        display: none;
+      }
+      
+      .header-main {
+        height: var(--mobile-header);
+      }
+      
+      .nav {
+        display: none;
+      }
+      
+      .mobile-menu-btn {
+        display: flex;
+      }
+      
+      main {
+        margin-top: var(--mobile-header);
+      }
+      
+      .hero {
+        padding: 40px 0;
+      }
+      
+      .hero-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .hero-cta {
+        flex-direction: column;
+      }
+      
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-content">
+          <div class="header-info">
+            <span>📍 奈良県北葛城郡広陵町笠287-1</span>
+            <span>⏰ 営業時間: 9:00-19:00（水曜定休）</span>
+          </div>
+          <div class="header-info">
+            <span>✉️ info@homemart-c21.jp</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="header-main">
+      <div class="container">
+        <div class="header-content">
+          <a href="/" class="logo">
+            <div class="logo-mark">C21</div>
+            <div class="logo-text">
+              <span class="logo-century">CENTURY 21</span>
+              <span class="logo-name">ホームマート</span>
+            </div>
+          </a>
+          
+          <nav class="nav">
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <a href="#" class="nav-link">会社案内</a>
+                <div class="nav-dropdown">
+                  <a href="/company/about.html" class="dropdown-link">
+                    会社概要
+                    <span class="dropdown-badge">✓</span>
+                  </a>
+                  <a href="/company/message.html" class="dropdown-link">
+                    代表挨拶
+                    <span class="dropdown-badge">✓</span>
+                  </a>
+                  <a href="/company/philosophy.html" class="dropdown-link">
+                    企業理念
+                    <span class="dropdown-badge">✓</span>
+                  </a>
+                  <a href="/company/staff.html" class="dropdown-link">
+                    スタッフ紹介
+                    <span class="dropdown-badge">✓</span>
+                  </a>
+                  <a href="/company/access.html" class="dropdown-link">
+                    アクセス
+                    <span class="dropdown-badge">✓</span>
+                  </a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">売買物件</a>
+                <div class="nav-dropdown">
+                  <a href="/search.html" class="dropdown-link">
+                    物件を探す
+                    <span class="dropdown-badge">✓</span>
+                  </a>
+                  <a href="/properties/new.html" class="dropdown-link">新着物件</a>
+                  <a href="/buy/flow.html" class="dropdown-link">
+                    購入の流れ
+                    <span class="dropdown-badge">✓</span>
+                  </a>
+                  <a href="/buy/loan-simulation.html" class="dropdown-link">ローンシミュレーション</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">売却相談</a>
+                <div class="nav-dropdown">
+                  <a href="/assessment.html" class="dropdown-link">
+                    無料査定
+                    <span class="dropdown-badge">✓</span>
+                  </a>
+                  <a href="/sell/flow.html" class="dropdown-link">
+                    売却の流れ
+                    <span class="dropdown-badge">✓</span>
+                  </a>
+                  <a href="/sell/cases.html" class="dropdown-link">
+                    不動産売却実績
+                    <span class="dropdown-badge">✓</span>
+                  </a>
+                  <a href="/urico.html" class="dropdown-link">URICO（作成中）</a>
+                  <a href="/voluntary-sale.html" class="dropdown-link">
+                    任意売却
+                    <span class="dropdown-badge">✓</span>
+                  </a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">リフォーム</a>
+                <div class="nav-dropdown">
+                  <a href="/reform-water.html" class="dropdown-link">
+                    水回り4点リフォーム
+                    <span class="dropdown-badge">✓</span>
+                  </a>
+                  <a href="/reform/services.html" class="dropdown-link">サービス一覧</a>
+                  <a href="/reform/cases.html" class="dropdown-link">施工事例</a>
+                  <a href="/reform/flow.html" class="dropdown-link">施工の流れ</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="/recruit.html" class="nav-link">採用情報</a>
+              </li>
+            </ul>
+            
+            <div class="header-cta">
+              <a href="/contact/form.html" class="btn-contact">お問い合わせ</a>
+              <a href="tel:0120438639" class="btn-tel">
+                📞 0120-43-8639
+              </a>
+            </div>
+          </nav>
+          
+          <button class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- メインコンテンツ -->
+  <main>
+    <!-- ヒーローセクション（インタラクティブ版） -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <span class="hero-badge">🏆 センチュリー21加盟店</span>
+            <h1>
+              奈良・大阪の不動産なら<br>
+              <span class="gold">センチュリー21ホームマート</span>
+            </h1>
+            <p class="hero-lead">
+              売買仲介から買取再販、リフォームまでワンストップで対応。<br>
+              日本最大級のネットワークと地域密着のきめ細やかなサービスで、<br>
+              お客様の大切な不動産取引を全力サポートいたします。
+            </p>
+            <div class="hero-cta">
+              <a href="/assessment.html" class="btn-primary">
+                <span>📊</span>
+                <span>無料査定を申し込む</span>
+              </a>
+              <a href="/search.html" class="btn-secondary">
+                <span>🏠</span>
+                <span>物件を探す</span>
+              </a>
+            </div>
+          </div>
+          
+          <!-- インタラクティブカード -->
+          <div class="hero-card">
+            <div class="hero-card-tabs">
+              <button class="hero-card-tab active" onclick="switchTab('news')">📢 最新情報</button>
+              <button class="hero-card-tab" onclick="switchTab('matching')">🏢 URICO診断</button>
+              <button class="hero-card-tab" onclick="switchTab('reform')">🔧 リフォーム見積</button>
+            </div>
+            
+            <div class="hero-card-content">
+              <!-- 最新情報タブ -->
+              <div class="tab-panel active" id="tab-news">
+                <ul style="list-style: none; padding: 0;">
+                  <li style="padding: 12px 0; border-bottom: 1px solid #E5E5E5; display: flex; align-items: flex-start; gap: 12px;">
+                    <span style="background: var(--c21-green); color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">HOT</span>
+                    <span style="flex: 1; font-size: 14px;">
+                      水回り4点リフォームキャンペーン実施中！工事費20%OFF
+                      <a href="/reform-water.html" style="color: var(--c21-blue); text-decoration: underline;">詳細</a>
+                    </span>
+                  </li>
+                  <li style="padding: 12px 0; border-bottom: 1px solid #E5E5E5; display: flex; align-items: flex-start; gap: 12px;">
+                    <span style="background: var(--c21-success); color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">完成</span>
+                    <span style="flex: 1; font-size: 14px;">
+                      会社案内ページが全面リニューアル完了
+                      <a href="/company/about.html" style="color: var(--c21-blue); text-decoration: underline;">詳細</a>
+                    </span>
+                  </li>
+                  <li style="padding: 12px 0; display: flex; align-items: flex-start; gap: 12px;">
+                    <span style="background: var(--c21-gold); color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">採用</span>
+                    <span style="flex: 1; font-size: 14px;">
+                      営業スタッフ・リフォーム職人募集中
+                      <a href="/recruit.html" style="color: var(--c21-blue); text-decoration: underline;">詳細</a>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              
+              <!-- URICOマッチング診断タブ -->
+              <div class="tab-panel" id="tab-matching">
+                <div class="matching-widget">
+                  <div class="matching-icon">🏢</div>
+                  
+                  <div class="matching-search">
+                    <label style="font-size: 14px; font-weight: 600; display: block; margin-bottom: 8px;">マンション名を入力</label>
+                    <div class="matching-search-box">
+                      <input type="text" class="matching-input" id="mansionName" placeholder="例：ザ・パークハウス、プラウド、ブランズ">
+                      <button class="matching-search-btn" onclick="searchMansion()">検索</button>
+                    </div>
+                  </div>
+                  
+                  <div class="matching-result" id="matchingResult">
+                    <div class="matching-count" id="matching-count">0</div>
+                    <div class="matching-label">人の購入希望者が<br><span id="mansion-display"></span>を狙っています！</div>
+                    
+                    <div class="matching-progress">
+                      <div class="matching-progress-bar" id="matching-bar"></div>
+                    </div>
+                    
+                    <a href="/urico.html" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 20px;">
+                      詳細を確認する
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- リフォーム見積もりタブ -->
+              <div class="tab-panel" id="tab-reform">
+                <div class="reform-tool">
+                  <h3 class="reform-title">
+                    <span>🏠</span>
+                    <span>水回りリフォーム見積もり</span>
+                  </h3>
+                  
+                  <!-- キッチン -->
+                  <div class="reform-section" id="kitchen-section">
+                    <div class="reform-section-header" onclick="toggleSection('kitchen')">
+                      <div class="reform-section-title">
+                        <input type="checkbox" class="reform-checkbox" id="kitchen-check" checked onchange="updateReform()">
+                        <span>🍳 キッチン</span>
+                      </div>
+                      <div class="reform-section-price" id="kitchen-price">50万円〜</div>
+                    </div>
+                    <div class="reform-options">
+                      <div class="reform-option">
+                        <label class="reform-option-label">
+                          <span>標準仕様（IHコンロ・食洗機付き）</span>
+                        </label>
+                        <select class="reform-select" onchange="updateKitchen()">
+                          <option value="50">標準仕様</option>
+                          <option value="45">ガスコンロ仕様（-5万円）</option>
+                          <option value="40">シンプル仕様（-10万円）</option>
+                          <option value="65">ハイグレード仕様（+15万円）</option>
+                        </select>
+                      </div>
+                      <div class="reform-option">
+                        <label class="reform-option-label">
+                          <input type="checkbox" checked onchange="updateReform()" data-price="-3">
+                          <span>レンジフード</span>
+                        </label>
+                        <span class="reform-option-price minus">標準装備</span>
+                      </div>
+                      <div class="reform-option">
+                        <label class="reform-option-label">
+                          <input type="checkbox" onchange="updateReform()" data-price="8">
+                          <span>カップボード追加</span>
+                        </label>
+                        <span class="reform-option-price plus">+8万円</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- 浴室 -->
+                  <div class="reform-section" id="bath-section">
+                    <div class="reform-section-header" onclick="toggleSection('bath')">
+                      <div class="reform-section-title">
+                        <input type="checkbox" class="reform-checkbox" id="bath-check" checked onchange="updateReform()">
+                        <span>🛁 浴室</span>
+                      </div>
+                      <div class="reform-section-price" id="bath-price">60万円〜</div>
+                    </div>
+                    <div class="reform-options">
+                      <div class="reform-option">
+                        <label class="reform-option-label">
+                          <span>サイズ</span>
+                        </label>
+                        <select class="reform-select" onchange="updateBath()">
+                          <option value="60">1616サイズ（標準）</option>
+                          <option value="55">1216サイズ（-5万円）</option>
+                          <option value="70">1620サイズ（+10万円）</option>
+                        </select>
+                      </div>
+                      <div class="reform-option">
+                        <label class="reform-option-label">
+                          <input type="checkbox" checked onchange="updateReform()" data-price="0">
+                          <span>浴室暖房乾燥機</span>
+                        </label>
+                        <span class="reform-option-price minus">標準装備</span>
+                      </div>
+                      <div class="reform-option">
+                        <label class="reform-option-label">
+                          <input type="checkbox" onchange="updateReform()" data-price="12">
+                          <span>ジェットバス機能</span>
+                        </label>
+                        <span class="reform-option-price plus">+12万円</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- 洗面台 -->
+                  <div class="reform-section" id="wash-section">
+                    <div class="reform-section-header" onclick="toggleSection('wash')">
+                      <div class="reform-section-title">
+                        <input type="checkbox" class="reform-checkbox" id="wash-check" checked onchange="updateReform()">
+                        <span>🚿 洗面台</span>
+                      </div>
+                      <div class="reform-section-price" id="wash-price">15万円〜</div>
+                    </div>
+                    <div class="reform-options">
+                      <div class="reform-option">
+                        <label class="reform-option-label">
+                          <span>幅サイズ</span>
+                        </label>
+                        <select class="reform-select" onchange="updateWash()">
+                          <option value="15">75cm（標準）</option>
+                          <option value="12">60cm（-3万円）</option>
+                          <option value="20">90cm（+5万円）</option>
+                        </select>
+                      </div>
+                      <div class="reform-option">
+                        <label class="reform-option-label">
+                          <input type="checkbox" onchange="updateReform()" data-price="3">
+                          <span>三面鏡（LED照明付き）</span>
+                        </label>
+                        <span class="reform-option-price plus">+3万円</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- トイレ -->
+                  <div class="reform-section" id="toilet-section">
+                    <div class="reform-section-header" onclick="toggleSection('toilet')">
+                      <div class="reform-section-title">
+                        <input type="checkbox" class="reform-checkbox" id="toilet-check" checked onchange="updateReform()">
+                        <span>🚽 トイレ</span>
+                      </div>
+                      <div class="reform-section-price" id="toilet-price">15万円〜</div>
+                    </div>
+                    <div class="reform-options">
+                      <div class="reform-option">
+                        <label class="reform-option-label">
+                          <span>グレード</span>
+                        </label>
+                        <select class="reform-select" onchange="updateToilet()">
+                          <option value="15">ウォシュレット付き（標準）</option>
+                          <option value="10">シンプル仕様（-5万円）</option>
+                          <option value="25">タンクレス仕様（+10万円）</option>
+                        </select>
+                      </div>
+                      <div class="reform-option">
+                        <label class="reform-option-label">
+                          <input type="checkbox" onchange="updateReform()" data-price="2">
+                          <span>手洗いカウンター</span>
+                        </label>
+                        <span class="reform-option-price plus">+2万円</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="reform-total">
+                    <div class="reform-total-label">お見積り金額（キャンペーン価格）</div>
+                    <div class="reform-total-price" id="reform-total">140万円〜</div>
+                    <div>
+                      <span class="reform-total-original">通常価格: 175万円</span>
+                      <span class="reform-total-discount">35万円OFF!</span>
+                      <span class="reform-badge">期間限定</span>
+                    </div>
+                  </div>
+                  
+                  <div style="text-align: center; margin-top: 16px;">
+                    <a href="/reform-water.html" class="btn-primary" style="font-size: 14px; padding: 12px 24px;">
+                      詳細見積もりを依頼
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ゲーミフィケーションセクション -->
+    <section class="game-section">
+      <div class="container">
+        <div class="game-container">
+          <h2 class="game-title">🎮 楽しく学ぶ不動産売却</h2>
+          <p class="game-subtitle">シミュレーターで最適な売却方法を見つけよう</p>
+          
+          <div class="game-cards">
+            <!-- 売却方法比較ツール -->
+            <div class="game-card">
+              <div class="comparison-tool">
+                <div class="comparison-header">
+                  <h3 class="comparison-title">売却方法で変わる手取り額</h3>
+                  <p style="font-size: 14px; color: var(--c21-gray);">2,000万円の物件を売却した場合</p>
+                </div>
+                
+                <div class="comparison-options">
+                  <div class="comparison-option selected" onclick="selectMethod('buyback')">
+                    <div class="comparison-icon">🏆</div>
+                    <div class="comparison-name">買取再販</div>
+                    <div class="comparison-desc">利益80%還元</div>
+                  </div>
+                  <div class="comparison-option" onclick="selectMethod('mediation')">
+                    <div class="comparison-icon">🤝</div>
+                    <div class="comparison-name">仲介売却</div>
+                    <div class="comparison-desc">市場価格</div>
+                  </div>
+                  <div class="comparison-option" onclick="selectMethod('instant')">
+                    <div class="comparison-icon">⚡</div>
+                    <div class="comparison-name">即時買取</div>
+                    <div class="comparison-desc">スピード重視</div>
+                  </div>
+                </div>
+                
+                <div class="comparison-result">
+                  <div class="comparison-result-value" id="method-result">2,100万円</div>
+                  <div class="comparison-result-label">最終手取り額（諸費用差引後）</div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 空き物件 -->
+            <div class="game-card">
+              <div class="comparison-tool">
+                <div class="comparison-header">
+                  <h3 class="comparison-title">🏠 あなたの街の不動産価値</h3>
+                  <p style="font-size: 14px; color: var(--c21-gray);">エリア別の相場情報をチェック</p>
+                </div>
+                
+                <div style="text-align: center; padding: 40px 0;">
+                  <div style="font-size: 48px; margin-bottom: 16px;">📊</div>
+                  <p style="font-size: 16px; color: var(--c21-gray); margin-bottom: 24px;">
+                    お住まいのエリアの<br>
+                    最新相場情報を無料でお調べします
+                  </p>
+                  <a href="/assessment.html" class="btn-primary" style="padding: 12px 32px;">
+                    無料相場診断
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- 特徴セクション -->
+    <section class="features">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">選ばれる3つの理由</h2>
+          <p class="section-subtitle">センチュリー21ホームマートが多くのお客様に選ばれる理由</p>
+        </div>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🏆</div>
+            <h3 class="feature-title">日本最大級のネットワーク</h3>
+            <p class="feature-desc">
+              センチュリー21は店舗数日本一。全国988店舗のネットワークで、お客様の物件を幅広く訴求します。
+            </p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">🔧</div>
+            <h3 class="feature-title">自社施工でコスト削減</h3>
+            <p class="feature-desc">
+              リフォーム工事は全て自社職人が施工。中間マージンゼロで、高品質な工事を適正価格でご提供します。
+            </p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">💰</div>
+            <h3 class="feature-title">独自の高額買取システム</h3>
+            <p class="feature-desc">
+              買取再販制度により、純利益の80%をお客様に還元。相場以上の売却益を実現する革新的なシステムです。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- サービス一覧 -->
+    <section class="services">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">サービス一覧</h2>
+          <p class="section-subtitle">お客様のニーズに合わせた幅広いサービスをご提供</p>
+        </div>
+        
+        <div class="services-grid">
+          <a href="/search.html" class="service-card complete">
+            <div class="service-header">
+              <div class="service-icon">🏠</div>
+              <h3 class="service-title">物件購入</h3>
+            </div>
+            <p class="service-desc">
+              マンション・一戸建て・土地など、豊富な物件情報から理想の住まいをお探しします。
+            </p>
+            <span class="service-link">詳しく見る →</span>
+          </a>
+          
+          <a href="/assessment.html" class="service-card complete">
+            <div class="service-header">
+              <div class="service-icon">📊</div>
+              <h3 class="service-title">売却査定</h3>
+            </div>
+            <p class="service-desc">
+              無料査定で適正価格をご提示。最短48時間でスピード査定いたします。
+            </p>
+            <span class="service-link">詳しく見る →</span>
+          </a>
+          
+          <a href="/reform-water.html" class="service-card complete">
+            <div class="service-header">
+              <div class="service-icon">🚿</div>
+              <h3 class="service-title">リフォーム</h3>
+            </div>
+            <p class="service-desc">
+              水回り4点リフォームが特別価格。キッチン・浴室・洗面・トイレを一新。
+            </p>
+            <span class="service-link">詳しく見る →</span>
+          </a>
+          
+          <a href="/urico.html" class="service-card">
+            <div class="service-header">
+              <div class="service-icon">🏢</div>
+              <h3 class="service-title">URICO</h3>
+            </div>
+            <p class="service-desc">
+              マンション売却の新サービス。購入希望者と直接マッチング。（準備中）
+            </p>
+            <span class="service-link">詳しく見る →</span>
+          </a>
+          
+          <a href="/voluntary-sale.html" class="service-card complete">
+            <div class="service-header">
+              <div class="service-icon">🤝</div>
+              <h3 class="service-title">任意売却</h3>
+            </div>
+            <p class="service-desc">
+              住宅ローンでお困りの方へ。秘密厳守で最適な解決策をご提案。
+            </p>
+            <span class="service-link">詳しく見る →</span>
+          </a>
+          
+          <a href="/sell/cases.html" class="service-card complete">
+            <div class="service-header">
+              <div class="service-icon">📈</div>
+              <h3 class="service-title">売却実績</h3>
+            </div>
+            <p class="service-desc">
+              豊富な売却実績と成功事例。お客様の声と共にご紹介。
+            </p>
+            <span class="service-link">詳しく見る →</span>
+          </a>
+          
+          <a href="/company/about.html" class="service-card complete">
+            <div class="service-header">
+              <div class="service-icon">🏆</div>
+              <h3 class="service-title">会社案内</h3>
+            </div>
+            <p class="service-desc">
+              センチュリー21ホームマートの理念、スタッフ、アクセス情報など。
+            </p>
+            <span class="service-link">詳しく見る →</span>
+          </a>
+          
+          <a href="/recruit.html" class="service-card complete">
+            <div class="service-header">
+              <div class="service-icon">👥</div>
+              <h3 class="service-title">採用情報</h3>
+            </div>
+            <p class="service-desc">
+              一緒に働く仲間を募集中。未経験者も大歓迎です。
+            </p>
+            <span class="service-link">詳しく見る →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-mark">C21</div>
+            <div class="logo-text">
+              <span class="logo-century">CENTURY 21</span>
+              <span class="logo-name">ホームマート</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            センチュリー21ホームマートは、奈良・大阪エリアの不動産売買仲介、買取再販、リフォームまでワンストップでサービスを提供しています。
+          </p>
+          <div class="footer-contact">
+            📍 〒635-0821 奈良県北葛城郡広陵町笠287-1<br>
+            📞 0120-43-8639<br>
+            📠 050-3183-9576<br>
+            ✉️ info@homemart-c21.jp
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h4>物件情報</h4>
+          <ul class="footer-links">
+            <li><a href="/search.html">物件を探す</a></li>
+            <li><a href="/properties/new.html">新着物件</a></li>
+            <li><a href="/buy/flow.html">購入の流れ</a></li>
+            <li><a href="/buy/loan-simulation.html">ローンシミュレーション</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>売却サービス</h4>
+          <ul class="footer-links">
+            <li><a href="/assessment.html">無料査定</a></li>
+            <li><a href="/sell/flow.html">売却の流れ</a></li>
+            <li><a href="/sell/cases.html">売却実績</a></li>
+            <li><a href="/urico.html">URICO</a></li>
+            <li><a href="/voluntary-sale.html">任意売却</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>会社情報</h4>
+          <ul class="footer-links">
+            <li><a href="/company/about.html">会社概要</a></li>
+            <li><a href="/company/message.html">代表挨拶</a></li>
+            <li><a href="/company/philosophy.html">企業理念</a></li>
+            <li><a href="/company/staff.html">スタッフ紹介</a></li>
+            <li><a href="/company/access.html">アクセス</a></li>
+            <li><a href="/privacy.html">プライバシーポリシー</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2025 Century21 HomeMart. All Rights Reserved. | センチュリー21・ジャパン加盟店</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    // タブ切り替え
+    function switchTab(tabName) {
+      // タブボタンのアクティブ状態を更新
+      document.querySelectorAll('.hero-card-tab').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      event.target.classList.add('active');
+      
+      // タブパネルの表示を更新
+      document.querySelectorAll('.tab-panel').forEach(panel => {
+        panel.classList.remove('active');
+      });
+      document.getElementById('tab-' + tabName).classList.add('active');
+    }
+    
+    // URICOマンション検索
+    function searchMansion() {
+      const mansionName = document.getElementById('mansionName').value;
+      if (!mansionName) {
+        alert('マンション名を入力してください');
+        return;
+      }
+      
+      // 検索結果を表示（ダミーデータ）
+      const count = Math.floor(Math.random() * 15) + 3;
+      document.getElementById('mansion-display').textContent = mansionName;
+      document.getElementById('matchingResult').style.display = 'block';
+      
+      // カウントアップアニメーション
+      let current = 0;
+      const interval = setInterval(() => {
+        current++;
+        document.getElementById('matching-count').textContent = current;
+        document.getElementById('matching-bar').style.width = (current / count * 100) + '%';
+        
+        if (current >= count) {
+          clearInterval(interval);
+        }
+      }, 50);
+    }
+    
+    // リフォーム見積もり
+    let reformPrices = {
+      kitchen: 50,
+      bath: 60,
+      wash: 15,
+      toilet: 15
+    };
+    
+    function toggleSection(section) {
+      const sectionEl = document.getElementById(section + '-section');
+      sectionEl.classList.toggle('active');
+    }
+    
+    function updateKitchen() {
+      const select = event.target;
+      reformPrices.kitchen = parseInt(select.value);
+      document.getElementById('kitchen-price').textContent = reformPrices.kitchen + '万円〜';
+      calculateTotal();
+    }
+    
+    function updateBath() {
+      const select = event.target;
+      reformPrices.bath = parseInt(select.value);
+      document.getElementById('bath-price').textContent = reformPrices.bath + '万円〜';
+      calculateTotal();
+    }
+    
+    function updateWash() {
+      const select = event.target;
+      reformPrices.wash = parseInt(select.value);
+      document.getElementById('wash-price').textContent = reformPrices.wash + '万円〜';
+      calculateTotal();
+    }
+    
+    function updateToilet() {
+      const select = event.target;
+      reformPrices.toilet = parseInt(select.value);
+      document.getElementById('toilet-price').textContent = reformPrices.toilet + '万円〜';
+      calculateTotal();
+    }
+    
+    function updateReform() {
+      calculateTotal();
+    }
+    
+    function calculateTotal() {
+      let total = 0;
+      
+      // 各セクションのチェック状態を確認
+      if (document.getElementById('kitchen-check').checked) {
+        total += reformPrices.kitchen;
+        
+        // オプション計算
+        document.querySelectorAll('#kitchen-section input[type="checkbox"]:not(.reform-checkbox)').forEach(cb => {
+          if (cb.checked && cb.dataset.price) {
+            total += parseInt(cb.dataset.price);
+          }
+        });
+      }
+      
+      if (document.getElementById('bath-check').checked) {
+        total += reformPrices.bath;
+        
+        document.querySelectorAll('#bath-section input[type="checkbox"]:not(.reform-checkbox)').forEach(cb => {
+          if (cb.checked && cb.dataset.price) {
+            total += parseInt(cb.dataset.price);
+          }
+        });
+      }
+      
+      if (document.getElementById('wash-check').checked) {
+        total += reformPrices.wash;
+        
+        document.querySelectorAll('#wash-section input[type="checkbox"]:not(.reform-checkbox)').forEach(cb => {
+          if (cb.checked && cb.dataset.price) {
+            total += parseInt(cb.dataset.price);
+          }
+        });
+      }
+      
+      if (document.getElementById('toilet-check').checked) {
+        total += reformPrices.toilet;
+        
+        document.querySelectorAll('#toilet-section input[type="checkbox"]:not(.reform-checkbox)').forEach(cb => {
+          if (cb.checked && cb.dataset.price) {
+            total += parseInt(cb.dataset.price);
+          }
+        });
+      }
+      
+      // 合計表示
+      document.getElementById('reform-total').textContent = total + '万円〜';
+      
+      // 通常価格（20%増し）
+      const originalPrice = Math.round(total * 1.25);
+      document.querySelector('.reform-total-original').textContent = '通常価格: ' + originalPrice + '万円';
+      document.querySelector('.reform-total-discount').textContent = (originalPrice - total) + '万円OFF!';
+    }
+    
+    // 売却方法比較
+    function selectMethod(method) {
+      document.querySelectorAll('.comparison-option').forEach(opt => {
+        opt.classList.remove('selected');
+      });
+      event.currentTarget.classList.add('selected');
+      
+      let result = '2,100万円';
+      if (method === 'mediation') {
+        result = '1,940万円';
+      } else if (method === 'instant') {
+        result = '1,700万円';
+      }
+      
+      document.getElementById('method-result').textContent = result;
+    }
+    
+    // 初期化
+    document.addEventListener('DOMContentLoaded', function() {
+      calculateTotal();
+    });
+  </script>
+</body>
+</html>
