@@ -1,0 +1,8 @@
+{
+  "name": "century21-homemart",
+  "private": true,
+  "scripts": {
+    "deploy": "vercel --prod",
+    "deploy:preview": "vercel"
+  }
+}

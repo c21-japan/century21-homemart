@@ -39,9 +39,27 @@ python -m http.server 8000
 bash scripts/organize-assets.sh
 ```
 
-## デプロイ
+## デプロイ（Vercel）
 
-このプロジェクトはVercelでホスティングされています。
+### コマンドからデプロイ
+
+```bash
+# 初回は Vercel にログインが必要な場合あり
+vercel login
+
+# 本番デプロイ
+npm run deploy
+# または
+vercel --prod
+```
+
+### GitHub 連携で自動デプロイ
+
+1. [Vercel](https://vercel.com) にログイン
+2. **Add New Project** → **Import** で `c21-japan/century21-homemart` を選択
+3. **Deploy** をクリック
+
+`main` ブランチへプッシュするたびに自動で本番デプロイされます。
 
 ## ライセンス
 
